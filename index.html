@@ -1,1 +1,27 @@
-Test test
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stupid CRC</title>
+    <script src="crc.js"></script>
+  </head>
+  <body>
+    <select name="crcAlgo" id="crcAlgo" onchange="updateArea()">
+      <option value="crc8">CRC-8-MAXIM</option>
+      <option value="crc10">CRC-10</option>
+      <option value="crc11">CRC-11</option>
+      <option value="crc12">CRC-12</option>
+      <option value="crc15">CRC-15</option>
+      <option value="crc16ibm">CRC-16-IBM</option>
+      <option value="crc16ccit">CRC-16-CCIT</option>
+      <option value="crc16t10">CRC-16-T10-DIF</option>
+    </select> 
+
+    <br></br>
+
+    <textarea name="hexInput" id="hexInput" rows=5 cols=30 onkeyup="updateArea()">AA BB CC</textarea>
+
+    <br></br>
+
+    <div id="algoOutput">Wait for it...</div>
+  </body>
+</html>
