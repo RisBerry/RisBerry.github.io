@@ -80,7 +80,7 @@ function updateArea() {
   if (checkInput(input)) {
     var data = input.split(" ").filter(i => i);
     data = data.map((e) => parseInt(e, 16));
-    outputArea.innerHTML = algo.getCrc(data).toString(16);
+    outputArea.innerHTML = "Result: 0x" + algo.getCrc(data).toString(16);
   } else {
     outputArea.innerHTML = "ERROR: Input seqence is not int hex format!"; 
   }

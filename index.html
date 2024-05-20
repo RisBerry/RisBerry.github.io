@@ -3,25 +3,57 @@
   <head>
     <title>Stupid CRC</title>
     <script src="crc.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family: "Roboto Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .areas {
+        width: 340px;
+        margin-inline: auto;
+        justify-content: center;
+        text-align: center;
+        min-height: 34pt;
+        margin-top: 20px;
+        box-shadow: 3px 3px 15px #777;
+      }
+    </style>
   </head>
   <body>
-    <select name="crcAlgo" id="crcAlgo" onchange="updateArea()">
-      <option value="crc8">CRC-8-MAXIM</option>
-      <option value="crc10">CRC-10</option>
-      <option value="crc11">CRC-11</option>
-      <option value="crc12">CRC-12</option>
-      <option value="crc15">CRC-15</option>
-      <option value="crc16ibm">CRC-16-IBM</option>
-      <option value="crc16ccit">CRC-16-CCIT</option>
-      <option value="crc16t10">CRC-16-T10-DIF</option>
-    </select> 
+    <div class="areas" style="padding-top:20px">
+      <select name="crcAlgo" id="crcAlgo" onchange="updateArea()">
+        <option value="crc8">CRC-8-MAXIM</option>
+        <option value="crc10">CRC-10</option>
+        <option value="crc11">CRC-11</option>
+        <option value="crc12">CRC-12</option>
+        <option value="crc15">CRC-15</option>
+        <option value="crc16ibm">CRC-16-IBM</option>
+        <option value="crc16ccit">CRC-16-CCIT</option>
+        <option value="crc16t10">CRC-16-T10-DIF</option>
+      </select> 
 
-    <br></br>
+      <br></br>
 
-    <textarea name="hexInput" id="hexInput" rows=5 cols=30 onkeyup="updateArea()">AA BB CC</textarea>
+      <textarea name="hexInput" id="hexInput" rows=5 cols=30 onkeyup="updateArea()">AA BB CC</textarea>
 
-    <br></br>
+      <br></br>
 
-    <div id="algoOutput">Wait for it...</div>
+    </div>
+
+    <div class="areas" style="display: table;">
+      <div id="algoOutput" style="display: table-cell; vertical-align: middle;">
+        Wait for it...
+      </div>
+    </div>
   </body>
 </html>
